@@ -67,7 +67,7 @@ function SegmentBaseLoader() {
         var initRange = null;
         var isoFile = null;
         var request = window.hola_cdn && window.hola_cdn.api && window.hola_cdn.api.new_http_request ?
-            window.hola_cdn.api.new_http_request({}) : new XMLHttpRequest();
+            window.hola_cdn.api.new_http_request({is_init: true}) : new XMLHttpRequest();
         var baseUrl = baseURLController.resolve(representation.path);
         var info = loadingInfo || {
             url: baseUrl ? baseUrl.url : undefined,
