@@ -5298,7 +5298,7 @@ function SegmentBaseLoader() {
         var isoFile = null;
         var sidx = null;
         var hasRange = !!range;
-        var request = window.hola_cdn && window.hola_cdn.api && window.hola_cdn.api.new_http_request ? window.hola_cdn.api.new_http_request({}) : new XMLHttpRequest();
+        var request = window.hola_cdn && window.hola_cdn.api && window.hola_cdn.api.new_http_request ? window.hola_cdn.api.new_http_request({ is_segbase: 1 }) : new XMLHttpRequest();
         var baseUrl = baseURLController.resolve(representation.path);
         var info = {
             url: baseUrl ? baseUrl.url : undefined,
